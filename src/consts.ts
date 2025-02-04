@@ -158,7 +158,8 @@ import {getCrossBrowserProperty} from "@daybrush/utils";
 console.log(getCrossBrowserProperty("transform")); // "transform", "-ms-transform", "-webkit-transform"
 console.log(getCrossBrowserProperty("filter")); // "filter", "-webkit-filter"
 */
-export const getCrossBrowserProperty =  /*#__PURE__*/(property: string) => {
+/*@__NO_SIDE_EFFECTS__*/
+export const getCrossBrowserProperty = (property: string) => {
   if (!doc) {
     return "";
   }

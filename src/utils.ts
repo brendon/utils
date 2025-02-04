@@ -531,7 +531,8 @@ requestAnimationFrame((timestamp) => {
   console.log(timestamp);
 });
 */
-export const requestAnimationFrame = /*#__PURE__*/(() => {
+/*@__NO_SIDE_EFFECTS__*/
+export const requestAnimationFrame = (() => {
   const firstTime = now();
 
   const raf = IS_WINDOW
@@ -563,7 +564,8 @@ const id = requestAnimationFrame((timestamp) => {
 
 cancelAnimationFrame(id);
 */
-export const cancelAnimationFrame = /*#__PURE__*/(() => {
+/*@__NO_SIDE_EFFECTS__*/
+export const cancelAnimationFrame = (() => {
   const caf = IS_WINDOW
     && (window.cancelAnimationFrame || (window as any).webkitCancelAnimationFrame
       || (window as any).mozCancelAnimationFrame || (window as any).msCancelAnimationFrame);
