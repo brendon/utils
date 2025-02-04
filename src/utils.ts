@@ -531,7 +531,6 @@ requestAnimationFrame((timestamp) => {
   console.log(timestamp);
 });
 */
-/*@__NO_SIDE_EFFECTS__*/
 export const requestAnimationFrame = (() => {
   const firstTime = now();
 
@@ -564,7 +563,6 @@ const id = requestAnimationFrame((timestamp) => {
 
 cancelAnimationFrame(id);
 */
-/*@__NO_SIDE_EFFECTS__*/
 export const cancelAnimationFrame = (() => {
   const caf = IS_WINDOW
     && (window.cancelAnimationFrame || (window as any).webkitCancelAnimationFrame
